@@ -8,57 +8,90 @@
     tools:context=".MainActivity"
     tools:ignore="OnClick">
 
-    <TextView
-        android:id="@+id/lbl"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Karla Yazmín "
-        app:layout_constraintHorizontal_bias="0.462"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="2dp"
 
-    <Button
-        android:id="@+id/btnSend"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="Send Broadcast"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lbl" />
+        android:background="@drawable/tres"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="parent">
 
-    <EditText
-        android:id="@+id/numero"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="212dp"
-        android:ems="10"
-        android:inputType="phone"
-        android:text="4171170054"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/sms"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:height="500px"
-        android:ems="10"
-        android:inputType="textMultiLine|text"
-        android:maxLength="2000"
-        android:maxLines="5"
-        android:text="Por el momento no estoy disponible ,atte Karla"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numero" />
+        <TextView
+            android:id="@+id/lbl"
+            android:layout_width="395dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Karla Yazmín García Pérez"
+            app:backgroundTint="#B9039BE5"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:textColor="#26C30B"
+            android:textAlignment="center"
+            app:layout_constraintHorizontal_bias="0.462"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="center_horizontal" />
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="395dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:gravity="center_horizontal"
+            android:text="Send Broadcast"
+            android:textAlignment="center"
+            app:backgroundTint="#E2E229E8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.444"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbl" />
+
+        <EditText
+            android:id="@+id/numero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="20dp"
+            android:ems="10"
+            android:inputType="phone"
+            android:hint="Establecer Número"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textColor="?android:attr/colorPressedHighlight"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/sms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="130dp"
+            android:height="500px"
+            android:background="@color/black"
+            android:ems="10"
+            android:gravity="center_horizontal"
+            android:hint="Escribe respuesta"
+            android:inputType="textMultiLine|text"
+            android:maxLength="2000"
+            android:maxLines="5"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/numero" />
+
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
