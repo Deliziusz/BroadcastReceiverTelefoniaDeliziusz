@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">BroadcastReceiverTelefoniaDeliziusz</string>
+    <string name="action_broadcast">zombie.deliziusz.broadcastreceivertelefoniadeliziusz.MIBROACAST</string>
+</resources>
