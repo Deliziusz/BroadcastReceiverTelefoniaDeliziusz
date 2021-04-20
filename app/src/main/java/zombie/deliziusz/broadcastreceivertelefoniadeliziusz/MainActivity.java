@@ -22,7 +22,7 @@ import android.widget.Toast;
 
 import zombie.deliziusz.broadcastreceivertelefoniadeliziusz.receivers.MiReceiverTelefonia;
 import zombie.deliziusz.broadcastreceivertelefoniadeliziusz.receivers.MyBroadcastReceiver;
-
+//Karla Yazmín García Pérez
 public class MainActivity extends AppCompatActivity {
 
     MyBroadcastReceiver myBroadcastReceiver =
@@ -34,17 +34,15 @@ public class MainActivity extends AppCompatActivity {
     TextView lbl;
     EditText txtTel, txtMessage;
 
+    //metodo para enviar un mensaje de texto
     private void enviarSMS(String tel, String msj) {
         SmsManager smsManager = SmsManager.getDefault();
 
         smsManager.sendTextMessage(tel, null, msj,
                 null, null);
 
-
         Toast.makeText(
-                this, "Mensaje enviado",
-                Toast.LENGTH_LONG
-        ).show();
+                this, "Mensaje enviado exitosamente", Toast.LENGTH_LONG).show();
     }
 
 
@@ -95,9 +93,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_main);
-
         setContentView(R.layout.activity_main);
 
         btnS = findViewById(R.id.btnSend);
@@ -123,10 +119,6 @@ public class MainActivity extends AppCompatActivity {
         filter.addAction(Intent.ACTION_AIRPLANE_MODE_CHANGED);
         filter.addAction("zombie.deliziusz.broadcastreceivertelefoniadeliziusz.MIBROACAST");
         this.registerReceiver(myBroadcastReceiver, filter);
-
-
-
-
 
         //Telephony.Sms .Intents.SMS_RECEIVED_ACTION
 
@@ -221,5 +213,4 @@ public class MainActivity extends AppCompatActivity {
         int check = ContextCompat.checkSelfPermission(this,permission);
         return (check == PackageManager.PERMISSION_GRANTED);  //Si el valor coincide con el valor de GRANTED, devuelve true
     }
-
 }
